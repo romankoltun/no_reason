@@ -1,0 +1,106 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "SimpleImageGallery.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/SimpleImageGallery.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SimpleImageGallery.Data.dll": {}
+        }
+      },
+      "SimpleImageGallery.Servises/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "SimpleImageGallery.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SimpleImageGallery.Servises.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SimpleImageGallery.Servises.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SimpleImageGallery.Data/1.0.0": {
+      "type": "project",
+      "path": "../SimpleImageGallery.Data/SimpleImageGallery.Data.csproj",
+      "msbuildProject": "../SimpleImageGallery.Data/SimpleImageGallery.Data.csproj"
+    },
+    "SimpleImageGallery.Servises/1.0.0": {
+      "type": "project",
+      "path": "../SimpleImageGallery.Servises/SimpleImageGallery.Servises.csproj",
+      "msbuildProject": "../SimpleImageGallery.Servises/SimpleImageGallery.Servises.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "SimpleImageGallery.Data >= 1.0.0",
+      "SimpleImageGallery.Servises >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\ProgramData\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\SimpleImageGalerry\\SimpleImageGalerry\\SimpleImageGalerry\\SimpleImageGalerry.csproj",
+      "projectName": "SimpleImageGalerry",
+      "projectPath": "C:\\Users\\User\\Desktop\\SimpleImageGalerry\\SimpleImageGalerry\\SimpleImageGalerry\\SimpleImageGalerry.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\SimpleImageGalerry\\SimpleImageGalerry\\SimpleImageGalerry\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\ProgramData\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "C:\\Users\\User\\Desktop\\SimpleImageGalerry\\SimpleImageGalerry\\SimpleImageGallery.Data\\SimpleImageGallery.Data.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\SimpleImageGalerry\\SimpleImageGalerry\\SimpleImageGallery.Data\\SimpleImageGallery.Data.csproj"
+            },
+            "C:\\Users\\User\\Desktop\\SimpleImageGalerry\\SimpleImageGalerry\\SimpleImageGallery.Servises\\SimpleImageGallery.Servises.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\SimpleImageGalerry\\SimpleImageGalerry\\SimpleImageGallery.Servises\\SimpleImageGallery.Servises.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
+      }
+    }
+  }
+}

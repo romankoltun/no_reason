@@ -1,0 +1,823 @@
+﻿
+
+body {
+    background: #e0e3e5;
+    font-family: "Roboto", sans-serif, Helvetica, Arial;
+}
+
+.head {
+    background-color: #fff;
+    min-height: 80px;
+    width: 100%;
+    margin: 0;
+    box-shadow: 0 1px 3px 0 #888;
+    position: fixed;
+    z-index: 10;
+}
+
+.ico img {
+    height: 66px;
+    margin-top: 7px;
+    padding: 0 0 3px 16px;
+}
+
+#menuVertical {
+    width: 71px;
+    height: auto;
+    position: fixed;
+    z-index: 5;
+    top: 0px;
+    transition: .3s;
+}
+
+    #menuVertical ul {
+        display: block;
+        width: 54px;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: relative;
+    }
+
+        #menuVertical ul li {
+            display: block;
+            width: 175px;
+            position: relative;
+        }
+
+            #menuVertical ul li a {
+                position: relative;
+                display: block;
+                width: 198px;
+                height: 40px;
+                box-sizing: border-box;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #fff;
+                line-height: 2em;
+                padding-top: 4px;
+                padding-left: 20px;
+                background: #332c38;
+                text-decoration: none;
+                text-shadow: 2px 2px 3px #222;
+                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+            }
+
+                #menuVertical ul li a:hover,
+                #menuVertical ul li:hover a {
+                    background: rgb(30, 60, 67);
+                    color: #fff;
+                }
+
+            #menuVertical ul li ul {
+                position: absolute;
+                top: 0px;
+                left: 198px;
+                display: none;
+                width: auto;
+            }
+
+            #menuVertical ul li:hover ul {
+                display: block;
+            }
+
+            #menuVertical ul li ul li a {
+                white-space: nowrap;
+                text-transform: none;
+                padding: 4px 20px;
+                width: 153px;
+            }
+
+                #menuVertical ul li ul li a:hover {
+                    background: rgb(38, 79, 88);
+                    color: #fff;
+                }
+
+.menu {
+    width: 198px;
+    height: 100%;
+    background: #332c38;
+    box-shadow: 1px 2px 3px #888;
+    position: fixed;
+    top: 79px;
+    z-index: 3;
+}
+
+.footer {
+    position: absolute;
+    width: 198px;
+    height: 88px;
+    bottom: -29px;
+    background: #332c38;
+    margin-bottom: 78px;
+    z-index: 13;
+    border-top: 1px solid rgb(9, 42, 51);
+    color: rgb(52, 100, 113);
+    text-align: center;
+    padding-top: 22px;
+}
+
+.img_n {
+    transition: .3s;
+}
+
+    .img_n:hover {
+        margin-left: 5px;
+        transition: .3s;
+    }
+
+/*MEDIA*/
+@media screen and (max-width: 500px) {
+    .menu {
+        width: 100px;
+        transition: .3s;
+    }
+
+    #menuVertical ul li a {
+        width: 57px;
+        transition: .3s;
+    }
+
+    #menuVertical ul li {
+        width: 57px;
+    }
+
+        #menuVertical ul li ul li a {
+            left: -141px;
+        }
+
+    span {
+        display: none;
+    }
+
+    .footer {
+        transform: rotate(-90deg);
+        left: -77px;
+        border-right: 1px solid rgb(9, 42, 51);
+        height: 24px;
+        bottom: 77px;
+        text-align: left;
+        padding-left: 11px;
+        padding-bottom: 25px;
+        padding-top: 6px;
+    }
+
+    .img_n img {
+        height: 40px;
+        margin-left: -7px;
+        margin-top: 9px;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .img_n img {
+        display: none;
+    }
+}
+
+.MyContent {
+    position: relative;
+    display: block;
+}
+
+.Scontent {
+    position: relative;
+    padding-left: 210px;
+}
+
+.LoginApp {
+    background: url(/image/background1.jpg) no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.login {
+    color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 310px;
+    height: 423px;
+    margin: -211px 0 0 -155px;
+    border-radius: 10px;
+    background: url(/image/abstract-background-for-mac.jpg) no-repeat;
+    background-size: cover;
+}
+
+.loginElement {
+    position: static;
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.loginLogo {
+    background: url(/image/disnay.png) no-repeat;
+    height: 250px;
+    position: static;
+    background-size: 100%;
+}
+
+.login-control1 {
+    width: 75%;
+    height: calc(2.25rem + 12px);
+    color: #495057;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s;
+    padding: 5px;
+}
+
+.login-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.login-type {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+#login-signin {
+    float: left;
+}
+
+#login-signup {
+    float: left;
+}
+
+.login-types {
+    margin-left: 20px;
+    padding: 4px;
+    height: 30px;
+    border-bottom: 3px solid #fff;
+    width: auto;
+    color: black;
+}
+
+.btn-primary {
+    width: 200px;
+}
+
+
+.product-wrapper {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    padding-top: 18px;
+}
+
+    .product-wrapper:hover {
+        text-decoration: none;
+    }
+
+#cash-href {
+    color: #fff;
+}
+
+    #cash-href:hover {
+        text-decoration: none;
+    }
+
+
+.menu-header {
+    background: linear-gradient(101.56deg,#20a7da,#244eb7);
+    width: 198px;
+    height: 50px;
+}
+
+#create-button {
+    width: 95px;
+    height: 40px;
+}
+
+.col-sm {
+    border-bottom: solid 2px;
+}
+
+.container {
+    margin: 10px;
+    padding: 0px;
+}
+
+.row {
+    background: #fff;
+    text-align: center;
+    min-height: 52px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+    .row img {
+        height: 31px;
+        width: 40px;
+        float: left;
+    }
+
+.legend .row {
+    background: #c6c8ca;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: solid 3px;
+    border-radius: 5px;
+    padding-top: 14px;
+}
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #73777b;
+    text-align: left;
+}
+
+.present-text {
+    padding-top: 14px;
+}
+
+.cash-bacground {
+    background: linear-gradient(118.69deg,#b883e3 -.93%,#9683e3 99.44%);
+    margin: 5px;
+    border-radius: 3px;
+    height: 70px;
+    min-width: 100px;
+    padding: 0;
+    font-size: 1.25rem;
+}
+
+.div-cash .row {
+    background: none;
+}
+
+
+
+.blue {
+    background: linear-gradient(113.98deg,#00acbf 2.91%,#0091bf);
+}
+
+.register {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 310px;
+    height: 550px;
+    margin: -260px 0 0 -155px;
+    border-radius: 10px;
+    background: url(/image/abstract-background-for-mac.jpg) no-repeat;
+    background-size: cover;
+}
+
+.cash-product {
+    background: none;
+    background-color: white;
+    margin: 5px;
+    color: none;
+    border-radius: 10px;
+    border: solid 4px;
+    height: 110px;
+    padding-top: 15px;
+    font-size: 1.25rem;
+    min-width: 90px;
+    max-width: 120px;
+}
+
+#cash-href-product {
+    color: #000;
+}
+
+    #cash-href-product:hover {
+        text-decoration: none;
+    }
+
+.cart_check {
+    position: fixed;
+    right: 0px;
+    top: 50px;
+    bottom: 0px;
+    min-height: 84vh;
+    width: 450px;
+    background-color: #fff;
+    padding-left: 15px;
+    padding-top: 100px;
+}
+
+.cart_check_one {
+    border-bottom: solid 2px #000;
+    min-width: 63px;
+    padding-bottom: 4px;
+}
+
+.cart_check_name {
+    position: relative;
+    left: 2px;
+    top: 0px;
+}
+
+.cart_sellingPrise {
+    width: 26px;
+    height: 20px;
+    position: relative;
+}
+
+.button_in_check {
+    position: relative;
+    border: 2px solid #ccd8dc;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+}
+
+.cart_with_buttons {
+    display: grid;
+    justify-items: center;
+}
+
+.cart_with_buttons_Plus {
+    position: absolute;
+    right: 0px;
+    top: 9px;
+}
+
+.cart_with_buttons_Minus {
+    position: absolute;
+    left: 0px;
+    top: 9px;
+}
+
+.cart_Quantity {
+    width: 26px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: 16px;
+}
+
+.incoming_invoice_create {
+}
+
+.in_right_panel {
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.in_right_panell {
+    width: 240px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.in_right_panel-sm {
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.row-margin-b {
+    margin-bottom: 20px;
+}
+
+.rigth_panel_for_somthing {
+    position: fixed;
+    right: -630px;
+    top: 50px;
+    bottom: 0px;
+    min-height: 550px;
+    width: 600px;
+    background-color: #fff;
+    transition-property: right;
+    transition-duration: .2s;
+    box-shadow: 0 0 4px rgba(0,0,0,.25);
+}
+
+.open {
+    right: 0px;
+}
+
+.rigth_panel_topLine {
+    min-height: 45px;
+    background: #000;
+    margin-bottom: 20px;
+}
+
+.right_panel_content {
+    display: grid;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.top_inputs_in_right_panel {
+    margin-bottom: 20px;
+}
+
+.rigth_panel2_for_somthing {
+    position: fixed;
+    right: 0px;
+    top: 50px;
+    bottom: 0px;
+    min-height: 84vh;
+    width: 600px;
+    background-color: #fff;
+    padding-left: 15px;
+    transition-property: right;
+    transition-duration: .2s;
+    box-shadow: 0 0 4px rgba(0,0,0,.25);
+    display: none;
+}
+
+.open2 {
+    display: block;
+    right: 600px;
+}
+
+.exit_button {
+    position: absolute;
+    left: 15px;
+    top: 0px;
+    height: 45px;
+    width: 45px;
+    background-color: red;
+    border: none;
+    border: 0px;
+    font-size: 60px;
+    margin: 0px;
+    padding: 50px;
+}
+
+.close {
+    position: absolute;
+    right: 32px;
+    top: -10px;
+    opacity: 0.3;
+    padding-bottom: 60px;
+}
+
+    .close:hover {
+        opacity: 1;
+    }
+
+    .close:before, .close:after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 33px;
+        width: 2px;
+        background-color: #fff;
+    }
+
+    .close:before {
+        transform: rotate(45deg);
+    }
+
+    .close:after {
+        transform: rotate(-45deg);
+    }
+
+.right_panel_div_submit {
+    position: relative;
+    bottom: 0px;
+}
+
+.right_panel_submit {
+    width: 200px;
+    height: 40px;
+}
+
+.cart_check_footer {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background-color: none;
+    height: 100px;
+    width: 450px;
+    border-top: solid 7px #888;
+}
+
+.cart_check_header {
+    position: fixed;
+    border-bottom: solid 7px #888;
+    top: 50px;
+    right: 0px;
+    background-color: none;
+    height: 100px;
+    width: 450px;
+}
+
+.btn_cash {
+    height: 30px;
+    width: 350px;
+    margin-left: 50px;
+}
+
+.cart_check_confirm_buy {
+    min-width: 500px;
+    min-height: 550px;
+    max-width: 500px;
+    max-height: 550px;
+    position: fixed;
+    top: 50%;
+    margin-top: -275px;
+    margin-left: -250px;
+    left: 50%;
+    background-color: red;
+    z-index: 21;
+}
+
+.cart_check_confirm_buy_background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: #888;
+    opacity: 0.5;
+    z-index: 20;
+}
+
+.cart_check_confirm_buy_header {
+    background-color: #332c38;
+    min-height: 55px;
+}
+
+.cart_check_confirm_buy_content {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.cart_check_confirm_buy_summa {
+    color: #36b9de;
+    text-align: right;
+}
+
+.row_int_cart_check {
+    padding-top: 15px;
+    color: black;
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}
+
+.second_in_right_panel {
+    margin-top: 100px;
+}
+
+.min-width-right-panel {
+    min-width: 600px;
+}
+
+.margin-10 {
+    margin: 10px;
+}
+
+.in_user {
+    border-top: 2px solid;
+}
+
+#basic-addon1 {
+    height: 35px;
+}
+
+.incCreate {
+}
+
+.topLine {
+    height: 30px;
+    width: 100%;
+    background-color: red;
+}
+
+.incCreateBlock {
+    background-color: white;
+    border-right: 5px solid;
+    min-height: 600px;
+    min-width: 451px;
+    margin-right: -20px;
+}
+
+.border-bottom {
+    border-bottom: 2px solid;
+}
+
+.bottom_submit {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+}
+
+.in_right_panel-sm-sm {
+    width: 127px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.in_right_panel-lg {
+    width: 335px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.in_right_panel-description {
+    width: 550px;
+    height: 70px;
+    border-radius: 5px;
+}
+
+.margin-t {
+    margin-top: 10px;
+}
+
+.margin-t-lg {
+    margin-top: 30px;
+}
+
+.bottom_submit_in_right_panel {
+    width: 550px;
+    height: 40px;
+    position: absolute;
+    bottom: 15px;
+    left: 26px;
+}
+
+.main-head {
+    position: fixed;
+    top: 0px;
+    height: 50px;
+    min-width: 100%;
+    background-color: white;
+}
+
+.create_categ {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -250px;
+    min-width: 500px;
+    min-height: 300px;
+    background-color: white;
+    z-index: 21;
+}
+
+.create_categ1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -250px;
+    min-width: 500px;
+    min-height: 300px;
+    background-color: white;
+    z-index: 21;
+}
+
+.top_line {
+    min-height: 45px;
+    background: #332c38;
+    margin-bottom: 20px;
+    padding-left:;
+}
+
+.form-item-category {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.create-categ-content {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.div-cash {
+    margin-top: 40px;
+    padding-right: 450px;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-color-green {
+    color: green;
+}
+
+.text-color-red {
+    color: red;
+}
+
+#pryhid-btn {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+}

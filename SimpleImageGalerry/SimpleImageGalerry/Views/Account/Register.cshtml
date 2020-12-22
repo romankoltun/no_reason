@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+    Layout = null;
+}
+
+@using SimpleImageGalerry.ViewModel
+@model RegisterModel
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Вертикальное меню</title>
+    <meta charset="utf-8">
+    <link href="~/css/register.css" rel="stylesheet" />
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+
+
+</head>
+
+<body class="LoginApp">
+
+
+    <div class="register">
+        <div class="login1">
+            <div class="loginLogo">
+
+            </div>
+            <div class="login-type">
+                <div id="login-signin" class="login-types">Вхід</div>
+                <div id="login-signup" class="login-types"> Реєстрація</div>
+                <div></div>
+            </div>
+            <form asp-action="Register" asp-controller="Account" asp-anti-forgery="true">
+                <div class="validation" asp-validation-summary="ModelOnly" />
+                <div class="loginElement">
+                    <label asp-for="Email">Введіть Email</label>
+                    <input type="text" asp-for="Email" class="login-control1" />
+                    <span asp-validation-for="Email" />
+                </div>
+                <div class="loginElement">
+                    <label asp-for=" EnterpriseName">Введіть ім'я</label>
+                    <input asp-for=" EnterpriseName" class="login-control1" />
+                    <span asp-validation-for=" EnterpriseName" />
+
+                </div>
+                <div class="loginElement">
+                    <label asp-for="Password">Введіть пароль</label>
+                    <input asp-for="Password" class="login-control1" />
+                    <span asp-validation-for="Password" />
+
+                </div>
+
+                <div class="loginElement">
+                    <label asp-for="ConfirmPassword">Повторіть пароль</label>
+                    <input asp-for="ConfirmPassword" class="login-control1" />
+                    <span asp-validation-for="ConfirmPassword" />
+
+                </div>
+                <div class="login-buttons">
+
+                    <button value="Вхід" type="submit" class="btn btn-primary" onclick="location.href='/Products'">Вхід</button>
+
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+
+</body>
+
+</html>
